@@ -1,6 +1,8 @@
 .env
 __pycache__/
 *.pyc
-data.json
-deaths.json
+*.pyo
+data/runs/
+data/halloffame.json
+data/state.json
 pokemonMapping.json
