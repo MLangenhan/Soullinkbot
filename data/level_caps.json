@@ -1,0 +1,220 @@
+{
+  "kanto_rby": {
+    "game_names": ["Rote Edition", "Blaue Edition", "Gelbe Edition", "Pokemon Rot", "Pokemon Blau", "Pokemon Gelb", "Red", "Blue", "Yellow"],
+    "caps": [
+      { "label": "Orden 1 – Pewter City (Rocko)",       "level": 14 },
+      { "label": "Orden 2 – Cerulean City (Maren)",     "level": 21 },
+      { "label": "Orden 3 – Vermillion City (Surge)",   "level": 24 },
+      { "label": "Orden 4 – Celadon City (Erika)",      "level": 29 },
+      { "label": "Orden 5 – Fuchsia City (Koga)",       "level": 43 },
+      { "label": "Orden 6 – Saffron City (Sabrina)",    "level": 47 },
+      { "label": "Orden 7 – Cinnabar Island (Pyro)",    "level": 50 },
+      { "label": "Orden 8 – Viridian City (Giovanni)",  "level": 53 },
+      { "label": "Elite Four 1 – Lorelei",              "level": 54 },
+      { "label": "Elite Four 2 – Bruno",                "level": 54 },
+      { "label": "Elite Four 3 – Agatha",               "level": 56 },
+      { "label": "Elite Four 4 – Lance",                "level": 60 },
+      { "label": "Champion – Gary/Blau",                "level": 65 }
+    ]
+  },
+  "kanto_frlg": {
+    "game_names": ["Feuerrote Edition", "Blattgrüne Edition", "Pokemon Feuerrot", "Pokemon Blattgrün", "FireRed", "LeafGreen"],
+    "caps": [
+      { "label": "Orden 1 – Pewter City (Rocko)",       "level": 14 },
+      { "label": "Orden 2 – Cerulean City (Maren)",     "level": 21 },
+      { "label": "Orden 3 – Vermillion City (Surge)",   "level": 24 },
+      { "label": "Orden 4 – Celadon City (Erika)",      "level": 29 },
+      { "label": "Orden 5 – Fuchsia City (Koga)",       "level": 43 },
+      { "label": "Orden 6 – Saffron City (Sabrina)",    "level": 47 },
+      { "label": "Orden 7 – Cinnabar Island (Pyro)",    "level": 50 },
+      { "label": "Orden 8 – Viridian City (Giovanni)",  "level": 53 },
+      { "label": "Elite Four 1 – Lorelei",              "level": 54 },
+      { "label": "Elite Four 2 – Bruno",                "level": 54 },
+      { "label": "Elite Four 3 – Agatha",               "level": 56 },
+      { "label": "Elite Four 4 – Lance",                "level": 60 },
+      { "label": "Champion – Gary/Blau",                "level": 65 }
+    ]
+  },
+  "johto_gsc": {
+    "game_names": ["Goldene Edition", "Silberne Edition", "Kristall-Edition", "Pokemon Gold", "Pokemon Silber", "Pokemon Kristall", "Gold", "Silver", "Crystal"],
+    "caps": [
+      { "label": "Orden 1 – Violastadt (Falkner)",          "level": 9  },
+      { "label": "Orden 2 – Azaleaburg (Knospe)",           "level": 17 },
+      { "label": "Orden 3 – Dukatiastadt (Clair... wait, Whitney)", "level": 19 },
+      { "label": "Orden 4 – Teakstadt (Morty)",             "level": 25 },
+      { "label": "Orden 5 – Olivianastadt (Chuck)",         "level": 29 },
+      { "label": "Orden 6 – Anemoniastadt (Jasmine)",       "level": 31 },
+      { "label": "Orden 7 – Mahagoniastadt (Pryce)",        "level": 35 },
+      { "label": "Orden 8 – Ebenholzstadt (Clair)",         "level": 41 },
+      { "label": "Elite Four 1 – Will",                     "level": 42 },
+      { "label": "Elite Four 2 – Koga",                     "level": 44 },
+      { "label": "Elite Four 3 – Bruno",                    "level": 46 },
+      { "label": "Elite Four 4 – Karen",                    "level": 47 },
+      { "label": "Champion – Lance",                        "level": 50 },
+      { "label": "── Kanto (optionale Reihenfolge) ──",     "level": null },
+      { "label": "Pewter City Gym (Rocko)",                 "level": 54 },
+      { "label": "Cerulean City Gym (Maren)",               "level": 54 },
+      { "label": "Vermillion City Gym (Surge)",             "level": 53 },
+      { "label": "Celadon City Gym (Erika)",                "level": 56 },
+      { "label": "Fuchsia City Gym (Koga Ersatz)",          "level": 50 },
+      { "label": "Saffron City Gym (Sabrina)",              "level": 55 },
+      { "label": "Seafoam Island Gym (Pyro Ersatz)",        "level": 59 },
+      { "label": "Viridian City Gym (Giovanni Ersatz)",     "level": 60 },
+      { "label": "Rot (Mt. Silver)",                        "level": 88 }
+    ]
+  },
+  "johto_hgss": {
+    "game_names": ["HeartGold", "SoulSilver", "HGSS", "Heart Gold", "Soul Silver", "Goldene Edition HeartGold", "Silberne Edition SoulSilver"],
+    "caps": [
+      { "label": "Orden 1 – Violastadt (Falkner)",          "level": 13 },
+      { "label": "Orden 2 – Azaleaburg (Knospe)",           "level": 17 },
+      { "label": "Orden 3 – Dukatiastadt (Whitney)",        "level": 19 },
+      { "label": "Orden 4 – Teakstadt (Morty)",             "level": 25 },
+      { "label": "Orden 5 – Olivianastadt (Chuck)",         "level": 31 },
+      { "label": "Orden 6 – Anemoniastadt (Jasmine)",       "level": 35 },
+      { "label": "Orden 7 – Mahagoniastadt (Pryce)",        "level": 34 },
+      { "label": "Orden 8 – Ebenholzstadt (Clair)",         "level": 41 },
+      { "label": "Elite Four 1 – Will",                     "level": 42 },
+      { "label": "Elite Four 2 – Koga",                     "level": 44 },
+      { "label": "Elite Four 3 – Bruno",                    "level": 46 },
+      { "label": "Elite Four 4 – Karen",                    "level": 47 },
+      { "label": "Champion – Lance",                        "level": 50 },
+      { "label": "── Kanto (optionale Reihenfolge) ──",     "level": null },
+      { "label": "Pewter City Gym (Rocko)",                 "level": 54 },
+      { "label": "Cerulean City Gym (Maren)",               "level": 54 },
+      { "label": "Vermillion City Gym (Surge)",             "level": 53 },
+      { "label": "Celadon City Gym (Erika)",                "level": 56 },
+      { "label": "Fuchsia City Gym (Janine)",               "level": 50 },
+      { "label": "Saffron City Gym (Sabrina)",              "level": 55 },
+      { "label": "Seafoam Island Gym (Blaine)",             "level": 59 },
+      { "label": "Viridian City Gym (Blue)",                "level": 60 },
+      { "label": "Rot (Mt. Silver)",                        "level": 88 }
+    ]
+  },
+  "hoenn_rse": {
+    "game_names": ["Rubin-Edition", "Saphir-Edition", "Smaragd-Edition", "Pokemon Rubin", "Pokemon Saphir", "Pokemon Smaragd", "Ruby", "Sapphire", "Emerald", "Rubin", "Saphir", "Smaragd"],
+    "caps": [
+      { "label": "Orden 1 – Wurzelheim (Roxanne)",         "level": 15 },
+      { "label": "Orden 2 – Metarost City (Brawly)",       "level": 18 },
+      { "label": "Orden 3 – Ewigenau (Wattson)",           "level": 24 },
+      { "label": "Orden 4 – Herzhofen (Flannery)",         "level": 29 },
+      { "label": "Orden 5 – Petalburg City (Norman)",      "level": 31 },
+      { "label": "Orden 6 – Mossdeep City (Tate & Liza)",  "level": 42 },
+      { "label": "Orden 7 – Fortree City (Winona)",        "level": 33 },
+      { "label": "Orden 8 – Sootopolis City (Juan/Wallace)","level": 46 },
+      { "label": "Elite Four 1 – Sidney",                  "level": 47 },
+      { "label": "Elite Four 2 – Phoebe",                  "level": 48 },
+      { "label": "Elite Four 3 – Glacia",                  "level": 50 },
+      { "label": "Elite Four 4 – Drake",                   "level": 52 },
+      { "label": "Champion – Steven/Wallace",              "level": 58 }
+    ]
+  },
+  "hoenn_oras": {
+    "game_names": ["Omega Rubin", "Alpha Saphir", "Pokemon Omega Rubin", "Pokemon Alpha Saphir", "Omega Ruby", "Alpha Sapphire", "ORAS"],
+    "caps": [
+      { "label": "Orden 1 – Wurzelheim (Roxanne)",          "level": 15 },
+      { "label": "Orden 2 – Metarost City (Brawly)",        "level": 18 },
+      { "label": "Orden 3 – Ewigenau (Wattson)",            "level": 24 },
+      { "label": "Orden 4 – Herzhofen (Flannery)",          "level": 29 },
+      { "label": "Orden 5 – Petalburg City (Norman)",       "level": 31 },
+      { "label": "Orden 6 – Fortree City (Winona)",         "level": 33 },
+      { "label": "Orden 7 – Mossdeep City (Tate & Liza)",   "level": 42 },
+      { "label": "Orden 8 – Sootopolis City (Wallace)",     "level": 46 },
+      { "label": "Elite Four 1 – Sidney",                   "level": 47 },
+      { "label": "Elite Four 2 – Phoebe",                   "level": 48 },
+      { "label": "Elite Four 3 – Glacia",                   "level": 50 },
+      { "label": "Elite Four 4 – Drake",                    "level": 52 },
+      { "label": "Champion – Steven",                       "level": 58 }
+    ]
+  },
+  "sinnoh_dp": {
+    "game_names": ["Diamant-Edition", "Perl-Edition", "Pokemon Diamant", "Pokemon Perl", "Diamond", "Pearl", "Diamant", "Perl", "Strahlender Diamant", "Leuchtende Perle", "Brilliant Diamond", "Shining Pearl", "BDSP"],
+    "caps": [
+      { "label": "Orden 1 – Sandgemme (Roxy)",              "level": 14 },
+      { "label": "Orden 2 – Erzelingen (Gardenia)",         "level": 22 },
+      { "label": "Orden 3 – Herzhofen (Maylene)",           "level": 28 },
+      { "label": "Orden 4 – Weideburg (Crasher Wake)",      "level": 30 },
+      { "label": "Orden 5 – Elyses (Fantina)",              "level": 36 },
+      { "label": "Orden 6 – Fleetburg (Byron)",             "level": 40 },
+      { "label": "Orden 7 – Blizzach (Candice)",            "level": 44 },
+      { "label": "Orden 8 – Sonnewik (Volkner)",            "level": 46 },
+      { "label": "Elite Four 1 – Aaron",                    "level": 53 },
+      { "label": "Elite Four 2 – Bertha",                   "level": 55 },
+      { "label": "Elite Four 3 – Flint",                    "level": 57 },
+      { "label": "Elite Four 4 – Lucian",                   "level": 59 },
+      { "label": "Champion – Cynthia",                      "level": 66 }
+    ]
+  },
+  "sinnoh_pt": {
+    "game_names": ["Platin-Edition", "Pokemon Platin", "Platinum", "Platin", "Platin Randomizer", "Platin Rand"],
+    "caps": [
+      { "label": "Orden 1 – Sandgemme (Roxy)",              "level": 14 },
+      { "label": "Orden 2 – Erzelingen (Gardenia)",         "level": 22 },
+      { "label": "Orden 3 – Herzhofen (Maylene)",           "level": 28 },
+      { "label": "Orden 4 – Weideburg (Crasher Wake)",      "level": 30 },
+      { "label": "Orden 5 – Elyses (Fantina)",              "level": 36 },
+      { "label": "Orden 6 – Fleetburg (Byron)",             "level": 40 },
+      { "label": "Orden 7 – Blizzach (Candice)",            "level": 44 },
+      { "label": "Orden 8 – Sonnewik (Volkner)",            "level": 50 },
+      { "label": "Elite Four 1 – Aaron",                    "level": 53 },
+      { "label": "Elite Four 2 – Bertha",                   "level": 55 },
+      { "label": "Elite Four 3 – Flint",                    "level": 57 },
+      { "label": "Elite Four 4 – Lucian",                   "level": 59 },
+      { "label": "Champion – Cynthia",                      "level": 66 }
+    ]
+  },
+  "einall_bw": {
+    "game_names": ["Schwarze Edition", "Weiße Edition", "Pokemon Schwarz", "Pokemon Weiß", "Black", "White", "Schwarz", "Weiß", "BW"],
+    "caps": [
+      { "label": "Orden 1 – Striaton City (Cilan/Chili/Cress)", "level": 15 },
+      { "label": "Orden 2 – Nacrene City (Lenora)",             "level": 20 },
+      { "label": "Orden 3 – Castelia City (Burgh)",             "level": 24 },
+      { "label": "Orden 4 – Nimbasa City (Elesa)",              "level": 29 },
+      { "label": "Orden 5 – Driftveil City (Clay)",             "level": 32 },
+      { "label": "Orden 6 – Mistralton City (Skyla)",           "level": 37 },
+      { "label": "Orden 7 – Icirrus City (Brycen)",             "level": 41 },
+      { "label": "Orden 8 – Opelucid City (Drayden/Iris)",      "level": 48 },
+      { "label": "Elite Four 1 – Shauntal",                     "level": 50 },
+      { "label": "Elite Four 2 – Marshal",                      "level": 50 },
+      { "label": "Elite Four 3 – Grimsley",                     "level": 50 },
+      { "label": "Elite Four 4 – Caitlin",                      "level": 50 },
+      { "label": "Champion – Alder",                            "level": 54 }
+    ]
+  },
+  "einall_bw2": {
+    "game_names": ["Schwarze Edition 2", "Weiße Edition 2", "Pokemon Schwarz 2", "Pokemon Weiß 2", "Black 2", "White 2", "BW2", "Schwarz 2", "Weiß 2"],
+    "caps": [
+      { "label": "Orden 1 – Aspertia City (Cheren)",            "level": 13 },
+      { "label": "Orden 2 – Virbank City (Roxie)",              "level": 18 },
+      { "label": "Orden 3 – Castelia City (Burgh)",             "level": 24 },
+      { "label": "Orden 4 – Nimbasa City (Elesa)",              "level": 28 },
+      { "label": "Orden 5 – Driftveil City (Clay)",             "level": 32 },
+      { "label": "Orden 6 – Mistralton City (Skyla)",           "level": 37 },
+      { "label": "Orden 7 – Opelucid City (Drayden)",           "level": 46 },
+      { "label": "Orden 8 – Humilau City (Marlon)",             "level": 49 },
+      { "label": "Elite Four 1 – Shauntal",                     "level": 52 },
+      { "label": "Elite Four 2 – Marshal",                      "level": 52 },
+      { "label": "Elite Four 3 – Grimsley",                     "level": 52 },
+      { "label": "Elite Four 4 – Caitlin",                      "level": 52 },
+      { "label": "Champion – Iris",                             "level": 57 }
+    ]
+  },
+  "kalos": {
+    "game_names": ["X", "Y", "Pokemon X", "Pokemon Y", "Pokémon X", "Pokémon Y", "XY", "Pokemon X und Y", "X und Y"],
+    "caps": [
+      { "label": "Orden 1 – Santalune City (Viola)",            "level": 12 },
+      { "label": "Orden 2 – Cyllage City (Grant)",              "level": 25 },
+      { "label": "Orden 3 – Shalour City (Korrina)",            "level": 30 },
+      { "label": "Orden 4 – Coumarine City (Ramos)",            "level": 34 },
+      { "label": "Orden 5 – Lumiose City (Clemont)",            "level": 38 },
+      { "label": "Orden 6 – Laverre City (Valerie)",            "level": 42 },
+      { "label": "Orden 7 – Anistar City (Olympia)",            "level": 48 },
+      { "label": "Orden 8 – Snowbelle City (Wulfric)",          "level": 51 },
+      { "label": "Elite Four 1 – Malva",                        "level": 55 },
+      { "label": "Elite Four 2 – Siebold",                      "level": 56 },
+      { "label": "Elite Four 3 – Wikstrom",                     "level": 57 },
+      { "label": "Elite Four 4 – Drasna",                       "level": 59 },
+      { "label": "Champion – Diantha",                          "level": 65 }
+    ]
+  }
+}

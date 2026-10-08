@@ -136,7 +136,118 @@ class EncountersCog(commands.Cog):
 
 
 async def setup(bot: commands.Bot, guild_id: int):
-    cog   = EncountersCog(bot, guild_id)
     guild = discord.Object(id=guild_id)
+
+    cog = EncountersCog(bot, guild_id)
     await bot.add_cog(cog)
     bot.tree.add_command(cog.available, guild=guild)
+
+    caps_cog = LevelCapsCog(bot, guild_id)
+    await bot.add_cog(caps_cog)
+    bot.tree.add_command(caps_cog.levelcaps, guild=guild)
+
+
+# ── Level caps ────────────────────────────────────────────────────────────────
+
+import json as _json
+import os as _os
+
+_CAPS_FILE = _os.path.join(
+    _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),
+    "data", "level_caps.json"
+)
+with open(_CAPS_FILE, "r", encoding="utf-8") as _f:
+    _CAPS_DATA: dict = _json.load(_f)
+
+# Flat alias list for fuzzy matching
+_CAPS_ALIASES: list[tuple[str, str]] = [
+    (key, alias)
+    for key, entry in _CAPS_DATA.items()
+    for alias in entry["game_names"]
+]
+
+def _detect_caps_key(game_name: str) -> str | None:
+    from rapidfuzz import fuzz, process
+    aliases = [alias for _, alias in _CAPS_ALIASES]
+    result  = process.extractOne(game_name, aliases, scorer=fuzz.WRatio, score_cutoff=70)
+    if not result:
+        return None
+    matched = result[0]
+    for key, alias in _CAPS_ALIASES:
+        if alias == matched:
+            return key
+    return None
+
+
+class LevelCapsCog(commands.Cog):
+    def __init__(self, bot: commands.Bot, guild_id: int):
+        self.bot      = bot
+        self.guild_id = guild_id
+
+    @app_commands.command(name="levelcaps", description="Show level caps for the active run's game")
+    async def levelcaps(self, interaction: discord.Interaction):
+        run_id = db.get_active_run_id()
+        if not run_id:
+            await interaction.response.send_message(
+                embed=embeds.danger(t(interaction, "run_not_found"), footer=t(interaction, "footer")),
+                ephemeral=True,
+            )
+            return
+
+        meta      = db.get_run_meta(run_id)
+        game_name = meta.get("game", "")
+        caps_key  = _detect_caps_key(game_name)
+
+        if not caps_key:
+            await interaction.response.send_message(
+                embed=embeds.warning(
+                    title="⚠️ Spiel nicht erkannt",
+                    description=(
+                        f"Für **{game_name}** wurden keine Level-Caps gefunden.\n"
+                        f"Unterstützte Spiele: Kanto (RBY/FRLG), Johto (GSC/HGSS), "
+                        f"Hoenn (RSE/ORAS), Sinnoh (DP/Pt), Einall (BW/BW2), Kalos (XY)."
+                    ),
+                    footer=t(interaction, "footer"),
+                ),
+                ephemeral=True,
+            )
+            return
+
+        entry = _CAPS_DATA[caps_key]
+        caps  = entry["caps"]
+
+        # Build embed fields — group into gyms, elite four, champion, extras
+        lines = []
+        for cap in caps:
+            if cap["level"] is None:
+                # Section divider
+                lines.append(f"\n**{cap['label']}**")
+            else:
+                lines.append(f"`Lv {cap['level']:>2}`  {cap['label']}")
+
+        # Paginate if needed (dividers + many entries e.g. HGSS Kanto)
+        pages_text, chunk, chars = [], [], 0
+        for line in lines:
+            if chars + len(line) + 1 > 3800:
+                pages_text.append("\n".join(chunk))
+                chunk, chars = [line], len(line)
+            else:
+                chunk.append(line)
+                chars += len(line) + 1
+        if chunk:
+            pages_text.append("\n".join(chunk))
+
+        n_pages = len(pages_text)
+        pages = [
+            embeds.info(
+                title=f"🏆 Level-Caps — {game_name}",
+                description=text,
+                footer=f"Seite {i+1}/{n_pages}  •  Soullink Bot",
+            )
+            for i, text in enumerate(pages_text)
+        ]
+
+        if len(pages) > 1:
+            await interaction.response.send_message(embed=pages[0], view=AvailableView(pages))
+        else:
+            await interaction.response.send_message(embed=pages[0])

@@ -297,22 +297,31 @@ class RoutesCog(commands.Cog):
         poke_lower = pokemon.lower()
         routes     = db.get_routes(run_id)
 
+        # Collect ALL routes where this pokemon appears
+        matches: list[str] = []
         for route_name, players in routes.items():
             for player, evo_line in players.items():
                 if any(poke_lower == n.lower() for n in evo_line):
-                    await interaction.response.defer()
-                    dead = db.get_dead_pokemon(run_id)
-                    await send_route_image(
-                        interaction, route_name, players, self.de_to_en, dead,
-                        footer=t(interaction, "footer"),
-                        title=t(interaction, "pokemon_logged", pokemon=pokemon.title(), route=route_name),
-                    )
-                    return
+                    matches.append(route_name)
+                    break  # one match per route is enough
 
-        await interaction.response.send_message(
-            embed=embeds.danger(t(interaction, "pokemon_not_logged", pokemon=pokemon.title()), footer=t(interaction, "footer")),
-            ephemeral=True,
-        )
+        if not matches:
+            await interaction.response.send_message(
+                embed=embeds.danger(t(interaction, "pokemon_not_logged", pokemon=pokemon.title()), footer=t(interaction, "footer")),
+                ephemeral=True,
+            )
+            return
+
+        await interaction.response.defer()
+        dead = db.get_dead_pokemon(run_id)
+
+        for route_name in matches:
+            players = routes[route_name]
+            await send_route_image(
+                interaction, route_name, players, self.de_to_en, dead,
+                footer=t(interaction, "footer"),
+                title=t(interaction, "pokemon_logged", pokemon=pokemon.title(), route=route_name),
+            )
 
     whereis.autocomplete("pokemon")(pokemon_autocomplete)
 
